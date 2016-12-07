@@ -1,0 +1,28 @@
+{
+  "name": "paravey",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "mudit jain"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.9",
+    "angular-route": "^1.5.9"
+  }
+}

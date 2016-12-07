@@ -1,0 +1,249 @@
+header.main-header{
+  nav.navbar{
+    min-height: $nav-height;
+    margin-bottom: 0;
+    ul.nav{
+      li{
+        a{
+          background: none;
+          padding: 10px 5px;
+          margin: 10px 15px;
+          border-bottom: solid 2px transparent;
+          text-transform: uppercase;
+          &:hover,&:active,&:focus{
+            color: $nav-color;
+            background: none;
+            border-bottom: solid 2px;
+          }
+        }
+        &.active > a{
+          color: $nav-color;
+          border-bottom: solid 2px;
+        }
+      }
+    }
+    .logo{
+      height: $nav-height;
+      padding: 10px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+
+}
+
+main.main-content{
+}
+/*--------------------section.hero-section starts-------------------------*/
+section.hero-section{
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-color: #26a5d1;
+    .hero-left{
+      color: #fff;
+      h1{
+        letter-spacing: 2px;
+        font-size: 2.75em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        line-height: 1.5;
+        a{
+          color: #fff;
+          text-decoration: none;
+          border-bottom: 3px solid #fff;
+          padding: 5px 10px;
+        }
+      }
+      ul{
+        list-style-type: none;
+        padding: 0;
+        font-family: $futura;
+        letter-spacing: 3px;
+        li{
+          font-size: 2.5em;
+          text-transform: uppercase;
+          margin: 20px 5px;
+          span.icon{
+            margin-right: 20px;
+            i.fa{
+              color: #fff;
+              font-size: 18px;
+              background: $orange;
+              @include size(45px);
+              line-height: 45px;
+              text-align: center;
+              @include border-radius(50%);
+              vertical-align: text-bottom;
+            }
+          }
+        }
+      }
+    }
+    .hero-right{
+    }
+}
+
+.hero-form{
+  background: #fff;
+  margin: 25px auto;
+  padding: 10px 15px;
+  @include box-sizing(border-box);
+  border-radius: 5px;
+  @include box-shadow(10px, 10px, 5px, rgba(0, 0, 0, 0.1));
+  border: solid 1px $light-green;
+  h1.title{
+    letter-spacing: 1.75px;
+    text-align: center;
+    font-size: 2.15em;
+    font-weight: 400;
+    margin: 15px 0;
+  }
+  input[type=text],input[type=email],input[type=number],input[type=password],input[type=phone]{
+    border: 0;
+    background: $input-bg;
+    box-shadow: none;
+    height: 40px;
+    // @include border-radius(10px);
+  }
+  select{
+    border: 0;
+    background: $input-bg;
+    box-shadow: none;
+    height: 40px;
+    outline: 0;
+    padding: 0 10px;
+  }
+  label{
+    font-size: .95em;
+    font-weight: 400;
+    font-family: $futura;
+    letter-spacing: 1px;
+    margin: 5px 0 0 7px;
+    display: inline-block;
+    a{
+      color: $link-color;
+      font-family: $primary-font;
+      font-weight: 600;
+    }
+  }
+  &.login{
+    max-width: 350px;
+    .btn-full{
+      margin: 10px auto;
+    }
+  }//hero-form login
+  &.register{
+    padding: 15px;
+    form > .row{
+      padding: 10px;
+    }
+    .form-horizontal{
+      margin:0 5px;
+    }
+    .dob{
+      .form-group{
+        margin-bottom: 5px
+      }
+    }
+    form{
+      // position: relative;
+      button.reg-btn.center{
+        position: absolute;
+        left: 50%;
+        @include transform(translate(-50%,-50%));
+        margin-top: 15px;
+      }
+      button.reg-btn.right{
+        position: relative;
+        top: 100px;
+        margin-top: 15px;
+      }
+    }
+  }//hero-form login
+}
+//hero-form ends
+
+
+.hero-form .ques{
+  text-align: center;
+  label{
+    font-size: 2em;
+    color: $blue;
+    letter-spacing: 2px;
+    &:before{
+      margin-top: 12px;
+    }
+    &:after{
+      margin-top: 12px;
+    }
+  }
+  .radio {
+    margin: 30px 25px;
+  }
+}
+/*----------------section.hero-section ends-------------------*/
+
+
+/* section partners starts */
+
+section.our-partners{
+  margin-top: 20px;
+  .sec-heading {
+    margin: 15px 20px;
+  }
+  .partners{
+    margin: 30px auto;
+    text-align: center;
+    .partner{
+      margin: 10px auto;
+      .p-title{
+        font-family: $primary-font;
+        margin-top: 25px;
+        font-size: 1.125em;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+}
+
+/* section partners ends */
+
+
+// quiz
+.hero-section{overflow: hidden;}
+.quizSection{
+  min-height: 100vh;
+}
+.quizWrap{
+  // display: none;
+  margin: auto;
+  @include center;
+  h3.question{
+    line-height: 1.5;
+  }
+  .options{
+    input:checked + label.btn-ans{
+      box-shadow: 0 0 10px 0 #00ff52;
+    }
+  }
+
+  .btn-ans{
+    &:after{display: none;}
+    &:before{display: none;}
+    width: 150px;
+    border: 3px solid;
+    border-radius: 5px;
+    font-size: 1.5em!important;
+    line-height: 2;
+    transition: all .3s;
+  }
+
+  .hero-form{
+    width: 550px;
+  }
+}
+
+.mover{
+  transform: scale(1.2);
+}

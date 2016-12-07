@@ -1,0 +1,170 @@
+<main class="main-content">
+  <!-- hero-section starts -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="col-md-5 dtable">
+        <div class="hero-left">
+          <h1 class="text-center">Join for free</h1>
+        </div>
+      </div>
+
+
+      <div class="col-md-7 dtable">
+        <div class="hero-right">
+          <div class="hero-form register">
+            <!-- <h1 class="title">Register</h1> -->
+            <span class="errAjax">{{register.errMessage}}</span>
+            <form  name="regForm" ng-submit="register.registerme()" method="GET">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="fname" id="fname" ng-model="register.userdata.firstname" required>
+                      <label for="fname">First Name </label>
+                      <span ng-show="!regForm.fname.$valid && regForm.fname.$touched" class="errMsz">This field is required.</span>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="lname" ng-model="register.userdata.lastname" required>
+                      <label for="lname">Last Name </label>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" id="e_mail" ng-model="register.userdata.email" required>
+                      <label for="e_mail">Email </label>
+                      <span ng-show="!regForm.email.$valid && regForm.email.$touched" class="errMsz">Enter a valid email adderess.</span>
+
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="phone" class="form-control" id="phone" ng-model="register.userdata.mobile" required>
+                      <label for="phone">Phone </label>
+                      <span ng-show="!regForm.phone.$valid && regForm.phone.$touched" class="errMsz">This field is required.</span>
+
+                    </div>
+                    <div class="form-group">
+                      <select class="dblock" name="gender" id="gender" ng-model="register.userdata.gender" required>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                      </select>
+                      <label for="gender">Gender</label>
+                      <span ng-show="!regForm.gender.$valid && regForm.gender.$touched" class="errMsz">This field is required.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="address" id="saddress" ng-model="register.userdata.address">
+                      <label for="saddress">Street Address</label>
+                    </div>
+                    <!-- nested row -->
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="city" id="city" ng-model="register.userdata.city">
+                          <label for="city">City</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="form-group ml0">
+                          <input type="text" class="form-control" name="state" id="state" ng-model="register.userdata.state">
+                          <label for="state">State</label>
+                        </div>
+                      </div>
+                    </div><!-- nested row ends-->
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="zipcode" ng-model="register.userdata.zip">
+                      <label for="zipcode">Zip Code</label>
+                    </div>
+
+                    <!-- nested row -->
+                    <div class="row dob">
+                        <div class="col-xs-4">
+                        <div class="form-group">
+                          <select class="form-control" name="dob" ng-model="register.userdata.dobm">
+                            <option value=''> Month </option>
+                              <option value='1'>Janaury</option>
+                              <option value='2'>February</option>
+                              <option value='3'>March</option>
+                              <option value='4'>April</option>
+                              <option value='5'>May</option>
+                              <option value='6'>June</option>
+                              <option value='7'>July</option>
+                              <option value='8'>August</option>
+                              <option value='9'>September</option>
+                              <option value='10'>October</option>
+                              <option value='11'>November</option>
+                              <option value='12'>December</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="form-group ml0">
+                          <select class="form-control" name="dob2" ng-model="register.userdata.dobd" ng-options="item for item in register.bDay">
+                            <option value="">day</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="form-group ml0">
+                          <input type="text" name="year" name="dob3" class="form-control" maxlength="4" placeholder="year" ng-model="register.userdata.doby" onlyDigits>
+                        </div>
+                      </div>
+                      <label class="mb10" for="">Date of birth</label>
+                    </div><!-- nested row ends-->
+
+
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="passw" id="pass" ng-model="register.userdata.password" required>
+                      <label for="pass">Password</label>
+                      <span ng-show="!regForm.passw.$valid && regForm.passw.$touched" class="errMsz">This field is required.</span>
+                    </div>
+
+                  </div>
+                </div>
+              </div><!--row ends-->
+              <button type="submit" ng-disabled="!regForm.$valid" class="btn center reg-btn btn-red btn-lg2">Join</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- hero-section ends -->
+
+  <!-- our partners -->
+  <section class="our-partners">
+    <div class="container">
+      <h3 class="sec-heading">
+        our partners
+        <span class="sap"></span>
+      </h3>
+
+      <div class="partners row">
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner1.png" alt="">
+          <h4 class="p-title">AMAZON</h4>
+        </div>
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner2.png" alt="">
+          <h4 class="p-title">UBER</h4>
+        </div>
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner3.png" alt="">
+          <h4 class="p-title">WALMART</h4>
+        </div>
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner4.png" alt="">
+          <h4 class="p-title">GROUPON</h4>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+  <!-- our partners ends-->
+</main>

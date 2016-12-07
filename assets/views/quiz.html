@@ -1,0 +1,86 @@
+<main class="main-content">
+  <!-- hero-section starts -->
+  <section class="hero-section quizSection">
+    <div class="container">
+      <div ig-show="quizCtrl.ques1" class="dtable quizWrap text-center active" data-quizno="1">
+        <div class="hero-right">
+          <form ng-submit="quizCtrl.quizSubmit()">
+            <div class="hero-form">
+            <h3 class="question">DO YOU LIKE OUR WEBSITE ?</h3>
+              <div class="ques">
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio1" name="radio1" ng-model="quizCtrl.optAns" value="yes" >
+                    <label class="btn-ans" for="inlineRadio1"> Yes </label>
+                </div>
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio2" name="radio1" ng-model="quizCtrl.optAns" value="no" >
+                    <label class="btn-ans" for="inlineRadio2"> NO </label>
+                </div>
+              </div>
+            </div>
+            <button  class="btn reg-btn btn-red btn-lg2 quizSub">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div ng-show="quizCtrl.ques2" class="dtable quizWrap text-center" data-quizno="1">
+        <div class="hero-right">
+          <form ng-submit="quizCtrl.quizSubmit1()">
+            <div class="hero-form">
+            <h3 class="question">DO YOU LIKE WORKING FROM HOME ?</h3>
+              <div class="ques">
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio21" name="radio2" ng-model="quizCtrl.optAns1" value="yes" >
+                    <label class="btn-ans" for="inlineRadio21"> Yes </label>
+                </div>
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio22" name="radio2" ng-model="quizCtrl.optAns1" value="no" >
+                    <label class="btn-ans" for="inlineRadio22"> NO </label>
+                </div>
+              </div>
+            </div>
+            <button  class="btn reg-btn btn-red btn-lg2 quizSub">Join</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- hero-section ends -->
+
+  <!-- our partners -->
+  <section class="our-partners">
+    <div class="container">
+      <h3 class="sec-heading">
+        our partners
+        <span class="sap"></span>
+      </h3>
+
+      <div class="partners row">
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner1.png" alt="">
+          <h4 class="p-title">AMAZON</h4>
+        </div>
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner2.png" alt="">
+          <h4 class="p-title">UBER</h4>
+        </div>
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner3.png" alt="">
+          <h4 class="p-title">WALMART</h4>
+        </div>
+        <div class="col-sm-3 col-xs-6 partner">
+          <img class="img-responsive" src="assets/images/partner4.png" alt="">
+          <h4 class="p-title">GROUPON</h4>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+  </section>
+  <!-- our partners ends-->
+</main>

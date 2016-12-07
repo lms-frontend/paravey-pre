@@ -1,0 +1,62 @@
+.btn-full{
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: $futura;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1em;
+  padding: 10px;
+  outline: 0!important;
+  &:hover, &:active, &:focus{
+    box-shadow: none;
+  }
+  i.fa{
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+.btn-full.green{
+    background: $green;
+      color: #fff;
+      &:hover, &:active, &:focus{
+        color: #fff;
+        box-shadow: none;
+    }
+}
+.btn-full.fb{
+    background: $facebook-color;
+      color: #fff;
+      &:hover, &:active, &:focus{
+        color: #fff;
+        box-shadow: none;
+    }
+}
+.btn-full.twi{
+    background: $twitter-color;
+      color: #fff;
+      &:hover, &:active, &:focus{
+        color: #fff;
+        box-shadow: none;
+    }
+}
+
+.btn-red{
+  background: $orange;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: 0!important;
+  font-family: $futura;
+}
+.btn.btn-lg2{
+  font-size: 1.65em;
+  padding: 10px 30px;
+}
+.btn.reg-btn{
+  &:hover,&:focus,&:active{
+    color: #fff;
+  }
+}

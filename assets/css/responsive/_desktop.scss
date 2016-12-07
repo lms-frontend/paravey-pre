@@ -1,0 +1,15 @@
+@media screen and (min-width:992px) {
+.dtable{
+  display: table;
+}
+section.hero-section{
+  height: $hero-banner-height;
+  .dtable{
+    height: $hero-banner-height;
+  }
+  .hero-left, .hero-right{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+}

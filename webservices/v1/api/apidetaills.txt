@@ -1,0 +1,83 @@
+base URL : http://knowledgeflow.in/shopin/webservices/
+
+
+Api : Register
+Url : http://knowledgeflow.in/shopin/webservices/v1/api/register
+Method : Post
+Params : user_role(2 for user, 3 for seller),fullname, email, mobile, password ,address,city,zipcode,device_token.(shop_name,image[base64]) in case of seller
+
+
+
+
+Api : Login
+Url : http://knowledgeflow.in/shopin/webservices/v1/api/login
+Method : Post
+Params : email, password
+
+
+Api : Forgot password
+Url : http://knowledgeflow.in/shopin/webservices/v1/api/forgot_password
+Method : Post
+Params : email
+
+
+API for Add Product 
+URL : http://knowledgeflow.in/shopin/webservices/v1/api/add_product
+PARAMS : user_id,product_name, category_id,sku, price, offer_price ,stock,city,size,image1,image2,image3
+
+ API for update Product 
+ URL : http://knowledgeflow.in/shopin/webservices/v1/api/update_product/integer(product_id)
+ PARAMS : user_id,product_name, category_id, sku,price, offer_price ,stock,city,size,image1,image2,image3
+
+
+ API for List Product 
+ URL : http://knowledgeflow.in/shopin/webservices/v1/api/productList/integer(user_id)
+
+
+API for getting My Account info 
+URL : http://knowledgeflow.in/shopin/webservices/v1/api/myAccount/integer(user_id)
+
+
+
+API for updating my account info
+Url : http://knowledgeflow.in/shopin/webservices/v1/api/updateMyAccount/integer(user_id)
+Method : Post
+Params : fullname, email, mobile, password ,address,city,zipcode,device_token.(shop_name,image[base64]) in case of seller
+
+ 
+API for deleting my products
+URL : http://knowledgeflow.in/shopin/webservices/v1/api/productDelete/integer(product_id)
+
+
+
+API for All Category
+URl : http://knowledgeflow.in/shopin/webservices/v1/api/getCategories
+Method : GET
+
+
+Api for MyOrders(sellers)
+URl : http://knowledgeflow.in/shopin/webservices/v1/api/sellerOrders/integer(loggedin user id seller)
+Method: post
+
+
+
+
+For buyer
+
+Api for order
+URl : http://knowledgeflow.in/shopin/webservices/v1/api/newOrder/41(loggedin user id)
+Method: post
+Params : product_id, seller_id,payment_mode(COD,CC)
+
+
+API for all Shops
+URl : http://knowledgeflow.in/shopin/webservices/v1/api/allShops
+Method: get
+
+
+API for product list of a particular shop
+URL : http://knowledgeflow.in/shopin/webservices/v1/api/listProducts/integer(category_id)
+Method : Post
+
+
+

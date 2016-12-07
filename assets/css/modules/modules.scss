@@ -1,0 +1,25 @@
+@import "buttons";
+@import "headings";
+
+.errMsz{
+  font-size: 12px;
+  color: #ea292f;
+  display: inline-block;
+  white-space: nowrap;
+  float: right;
+  margin-top: 2px;
+  }
+
+.greenb{
+  box-shadow: 0 0 0 1px green inset!important;
+}
+.redb{
+  box-shadow: 0 0 0 1px red inset!important;
+}
+
+.errAjax{
+  display: block;
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}
