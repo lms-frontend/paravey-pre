@@ -1,11 +1,14 @@
 <?php
 
 function reverse_string($str){
-  return strrev($str);
+    return strrev($str);
 }
 
 function encode_string($str){
-  return base64_encode($str);
+  $data = base64_encode($str);
+  $data = str_replace(array('+', '/', '='), array('-', '_', ''), $data);
+  return $data;
+  //return base64_encode($str);
 }
 
 function uploadBase64Image($userId,$profilePhoto,$uploadPath)
@@ -51,8 +54,8 @@ function sendEmail($email, $subject, $body, $from = '', $cc = '', $bcc = '') {
       $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
      // $mail->Host = "ssl://smtp.gmail.com";
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
-      $mail->Username = 'ranjana.bhagwat21@gmail.com';                 // SMTP username
-      $mail->Password = '9202207280';                           // SMTP password
+      $mail->Username = '';                 // SMTP username
+      $mail->Password = '';                           // SMTP password
       $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
       $mail->Port = 587;                                    // TCP port to connect to
       $mail->setFrom($from, 'Speak App');

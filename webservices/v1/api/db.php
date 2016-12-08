@@ -1,13 +1,11 @@
 <?php
 function getDB() {
-
-
 	$dbhost="localhost";
 	$dbuser="root";
 	$dbpass="";
-	$dbname="paravey";
+	$dbname="paravey_pre";
 	$dbConnection = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
-        $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	return $dbConnection;
 }
 ?>

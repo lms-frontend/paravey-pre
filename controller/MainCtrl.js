@@ -4,4 +4,6 @@ myApp.controller('MainCtrl', function($rootScope,$location){
       return viewLocation === $location.path();
   };
   $rootScope.isRegistered = true;
+  $rootScope.userId = '';
+  $rootScope.currPage = '';
 });

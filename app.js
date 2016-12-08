@@ -1,4 +1,4 @@
-var myApp = angular.module('paraveyApp', ['ngRoute']);
+var myApp = angular.module('paraveyApp', ['ngRoute', 'ngAnimate']);
 
 myApp.config(['$routeProvider','$locationProvider','$httpProvider',function($routeProvider,$locationProvider,$httpProvider) {
     //$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

@@ -1,4 +1,7 @@
 myApp.controller('RegisterCtrl', function($http,$location,$rootScope){
+  $rootScope.currPage = 'register';
+  // alert($rootScope.currPage);
+  // alert();
   console.log('RegisterCtrl');
   var vm = this;
   vm.name = "mudit Jain";
@@ -27,8 +30,13 @@ myApp.controller('RegisterCtrl', function($http,$location,$rootScope){
           data: regData
       }).success(function(response){
         console.log(response);
-        $rootScope.isRegistered = true;
-        $location.path('/quiz');
+        if(response.status == "success"){
+          $rootScope.isRegistered = true;
+          $rootScope.userId = response.data.userid;
+          $location.path('/quiz');
+        }else{
+          alert('err');
+        }
 
       }).error(function(response){
         console.log(response);
