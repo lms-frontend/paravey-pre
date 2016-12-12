@@ -49,7 +49,7 @@ header.main-header{
     }
     .logo{
       height: $nav-height;
-      padding: 10px;
+      padding: 5px;
       img{
         height: 100%;
       }
@@ -238,9 +238,9 @@ section.our-partners{
 // quiz
 .hero-section{overflow: hidden;}
 section.quizSection{
-  min-height: 600px;
-  background-image: url(../images/bg2.jpg);
-  height: calc( 100vh - 62px)
+  // min-height: 600px;
+  background-image: url(../images/bg1.jpg);
+  min-height: calc( 100vh - 64px)
 }
 .quizWrap{
   .quiz-form{
@@ -252,6 +252,8 @@ section.quizSection{
     overflow: hidden;
     box-shadow: 0 -1px 1px 1px rgba(255, 255, 255, 0.74);
     -webkit-box-shadow: 0 -1px 1px 1px rgba(255, 255, 255, 0.74);
+    -webkit-animation-duration:.75s!important;
+    animation-duration:.75s!important;
     h3.question{
       line-height: 1.5;
       background: $orange;
@@ -261,6 +263,7 @@ section.quizSection{
       letter-spacing: 3px;
       padding: 20px 10px;
       margin: 0;
+      text-transform: uppercase;
     }
     .ques{
       margin: 20px 0;
@@ -281,6 +284,7 @@ section.quizSection{
         box-shadow: 0 0 0 2px #f06f73;
         -webkit-box-shadow: 0 0 0 2px #f06f73;
     }
+    padding: 0 10px!important;
   }
 
   }
@@ -304,6 +308,22 @@ section.quizSection{
     width: 550px;
   }
 }
+
+// thnak you
+.thankyou{
+  .thankU-heading{
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  .thankU-text{
+    color: #838486;
+    font-size: 1.85em;
+    letter-spacing: 3px;
+    padding: 50px;
+  }
+}
+
+// thnak you
 
 // animation
 

@@ -3,7 +3,9 @@ myApp.controller('MainCtrl', function($rootScope,$location){
   vm.isActive = function (viewLocation) {
       return viewLocation === $location.path();
   };
-  $rootScope.isRegistered = true;
-  $rootScope.userId = '';
+  // rootScopes
+  $rootScope.apiBaseUrl = 'http://localhost/paravey-pre';//false
+  $rootScope.isRegistered = false;//false
+  $rootScope.userId = '';// ''
   $rootScope.currPage = '';
 });

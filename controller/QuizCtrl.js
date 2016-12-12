@@ -12,7 +12,7 @@ myApp.controller('QuizCtrl', function($http, $rootScope, $location){
 // post quiz ans
   vm.sendQuiz = function(quizData){
     $http({
-         url: "http://localhost/paravey-pre/webservices/v1/api/quiz",
+         url: $rootScope.apiBaseUrl + "/webservices/v1/api/quiz",
          method: 'POST',
          data: quizData
      }).success(function(response){
@@ -112,7 +112,5 @@ myApp.controller('QuizCtrl', function($http, $rootScope, $location){
     //     $(this).show();
     //   }
     // });
-
-
   });
 });

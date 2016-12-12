@@ -3,9 +3,9 @@
   <section class="hero-section quizSection">
       <div ng-show="quizCtrl.currentQ == 1" class="dtable quizWrap text-center">
         <div class="hero-right">
-          <form ng-submit="quizCtrl.quizSubmit(quizCtrl.optAns, 'DO YOU LIKE OUR WEBSITE ?')">
+          <form ng-submit="quizCtrl.quizSubmit(quizCtrl.optAns, 'Do you like working from home? ')">
             <div class="quiz-form">
-            <h3 class="question">DO YOU LIKE OUR WEBSITE ?</h3>
+            <h3 class="question">Do you like working from home?</h3>
               <div class="ques">
                 <div class="radio radio-inline options">
                     <input type="radio" id="inlineRadio1" name="radio1" ng-model="quizCtrl.optAns" value="yes" >
@@ -24,9 +24,9 @@
 
       <div ng-show="quizCtrl.currentQ == 2" class="dtable quizWrap text-center">
         <div class="hero-right">
-          <form ng-submit="quizCtrl.quizSubmit1(quizCtrl.optAns1 ,'DO YOU LIKE WORKING FROM HOME ?')">
+          <form ng-submit="quizCtrl.quizSubmit1(quizCtrl.optAns1 ,'Would you like to know your credit score?')">
             <div class="quiz-form">
-            <h3 class="question">DO YOU LIKE WORKING FROM HOME ?</h3>
+            <h3 class="question">Would you like to know your credit score?</h3>
               <div class="ques">
                 <div class="radio radio-inline options">
                     <input type="radio" id="inlineRadio21" name="radio2" ng-model="quizCtrl.optAns1" value="yes" >
@@ -46,9 +46,9 @@
 
       <div ng-show="quizCtrl.currentQ == 3" class="dtable quizWrap text-center">
         <div class="hero-right">
-          <form ng-submit="quizCtrl.quizSubmit2(quizCtrl.optAns2 ,'DO YOU LIKE WORKING FROM HOME ?')">
+          <form ng-submit="quizCtrl.quizSubmit2(quizCtrl.optAns2 ,'Have you ever work like this before ?')">
             <div class="quiz-form">
-            <h3 class="question">DO YOU LIKE WORKING FROM HOME ?</h3>
+            <h3 class="question">Have you ever work like this before ?</h3>
               <div class="ques">
                 <div class="radio radio-inline options">
                     <input type="radio" id="inlineRadio31" name="radio3" ng-model="quizCtrl.optAns2" value="Yes" >
@@ -77,7 +77,16 @@
       </div>
 
       <div ng-show="quizCtrl.thankU" class="dtable quizWrap text-center">
-        Thnaks
+        <div class="hero-right">
+          <div class="quiz-form thankyou">
+              <h3 class="question thankU-heading">Thank You</h3>
+              <div class="thankU-text">
+                You Have been successfully registered.
+              </div>
+
+
+            </div>
+        </div>
       </div>
 
   </section>

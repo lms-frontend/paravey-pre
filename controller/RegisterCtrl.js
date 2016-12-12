@@ -23,9 +23,9 @@ myApp.controller('RegisterCtrl', function($http,$location,$rootScope){
      regData.zip =  vm.userdata.zip;
      regData.gender = vm.userdata.gender;
      regData.dob =  vm.userdata.dobd +"-"+vm.userdata.dobm+"-"+vm.userdata.doby;
-
+    //  console.log($rootScope.apiBaseUrl + "/webservices/v1/api/register");
      $http({
-          url: "http://localhost/paravey-pre/webservices/v1/api/register",
+          url: $rootScope.apiBaseUrl + "/webservices/v1/api/register",
           method: 'POST',
           data: regData
       }).success(function(response){
@@ -34,6 +34,7 @@ myApp.controller('RegisterCtrl', function($http,$location,$rootScope){
           $rootScope.isRegistered = true;
           $rootScope.userId = response.data.userid;
           $location.path('/quiz');
+          vm.userdata = {};
         }else{
           alert('err');
         }

@@ -56,11 +56,25 @@
   .quiz-form{
     .ques{
       margin: 0!important;
+      }
+      .options{
+        margin-left: 0;
+        margin-top: 10px;
     }
-    .options{
-      margin-left: 0;
-      margin-top: 10px;
   }
 
+  .thankyou{
+    .thankU-text{
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      padding: 20px;
+    }
+  }
+
+  section.quizSection{
+    min-height: 700px;
+    .quiz-form {
+        margin-top: 50px !important;
+    }
   }
 }
