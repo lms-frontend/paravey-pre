@@ -78,17 +78,17 @@ myApp.controller('RegisterCtrl', function($http,$location,$rootScope){
   });
 
   //city state dropdown starts
-  vm.getCities = function(){
-    // alert(vm.userdata.state);
-     //getting city data
-    $http.get($rootScope.apiBaseUrl + '/webservices/v1/api/cities/'+ vm.userdata.state)
-      .success(function(response){
-        // console.log(response.data);
-        vm.cities =  response.data;
-    })
-    .error(function(response){
-      console.log('error', response);
-    });
-  };
+    // vm.getCities = function(){
+    //   // alert(vm.userdata.state);
+    //    //getting city data
+    //   $http.get($rootScope.apiBaseUrl + '/webservices/v1/api/cities/'+ vm.userdata.state)
+    //     .success(function(response){
+    //       // console.log(response.data);
+    //       vm.cities =  response.data;
+    //   })
+    //   .error(function(response){
+    //     console.log('error', response);
+    //   });
+    // };
   //city state dropdown starts
 });

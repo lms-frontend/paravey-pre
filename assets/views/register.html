@@ -39,17 +39,6 @@
                 <div class="row">
                   <div class="col-sm-4 col-xs-6 pr0">
                     <div class="form-group">
-                      <select class="form-control" ng-model="register.userdata.state" ng-change="register.getCities()">
-                      	<option value="">STATE</option>
-                      	<option ng-repeat="option in register.stateData" value="{{option.state_id}}">{{option.abbriviation}}</option>
-                      </select>
-
-                      <!-- <input type="text" class="form-control" name="state" id="state" placeholder="State" ng-model="register.userdata.state">
-                      <label for="state">State</label> -->
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-xs-6">
-                    <div class="form-group">
                       <!-- <select class="form-control" name="city" id="city" ng-model="register.userdata.city">
                         <option value="">CITY</option>
                         <option value="city_name" ng-repeat="city in register.cities">{{city.city_name}}</option>
@@ -57,6 +46,19 @@
 
                       <input type="text" class="form-control" name="city" id="city" placeholder="City" ng-model="register.userdata.city">
                       <label for="city">City</label>
+
+                      <!-- <input type="text" class="form-control" name="state" id="state" placeholder="State" ng-model="register.userdata.state">
+                      <label for="state">State</label> -->
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="form-group">
+
+
+                      <select class="form-control" ng-model="register.userdata.state">
+                      	<option value="">STATE</option>
+                      	<option ng-repeat="option in register.stateData" value="{{option.state_id}}">{{option.abbriviation}}</option>
+                      </select>
                     </div>
                   </div>
                   <div class="col-sm-4 col-xs-12">
@@ -143,8 +145,8 @@
                 <div class="form-group">
                   <input type="password" class="form-control" name="repassw" placeholder="Confirm Password" id="repass" ng-model="register.userdata.repassword" required>
                   <label for="pass">Confirm Password</label>
-                  <span ng-show="!regForm.repassw.$valid && regForm.repassw.$touched" class="errMsz">This field is required.</span>
-                  <span class="errMsz" ng-show="register.userdata.password !== register.userdata.repassword" >Error password is not matched</span>
+                  <span ng-show="!regForm.repassw.$valid && regForm.repassw.$touched" class="errMsz"> This field is required. </span>
+                  <span class="errMsz" ng-show="register.userdata.password !== register.userdata.repassword" > Error password is not matched. </span>
                 </div>
 
               </div><!--row ends-->
