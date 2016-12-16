@@ -39,13 +39,13 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <!-- nav for registerpg -->
-                <ul class="nav navbar-nav navbar-right" ng-if="currPage == 'register'">
+                <ul class="nav navbar-nav navbar-right" ng-if="!isRegistered">
                   <li ng-class="{ active:main.isActive('/')}"><a href="#/">Register</a></li>
                   <li ><a href="javascript:void(0)">login</a></li>
                   <li><a href="javascript:void(0)">benifits</a></li>
                 </ul>
                 <!-- nav for quiz -->
-                <ul class="nav navbar-nav navbar-right quizNav" ng-if="currPage == 'quiz'">
+                <ul class="nav navbar-nav navbar-right quizNav" ng-if="isRegistered">
                   <li ng-class="{ active:main.isActive('/privacy')}"><a href="javascript:void(0)">Privacy Policy</a></li>
                   <li ><a href="javascript:void(0)">Terms of Service</a></li>
                 </ul>
@@ -79,5 +79,6 @@
     <script src="controller/MainCtrl.js"></script>
     <script src="controller/RegisterCtrl.js"></script>
     <script src="controller/QuizCtrl.js"></script>
+    <script src="controller/CongoCtrl.js"></script>
   </body>
 </html>

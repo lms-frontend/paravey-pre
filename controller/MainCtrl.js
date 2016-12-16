@@ -5,7 +5,7 @@ myApp.controller('MainCtrl', function($rootScope,$location){
   };
   // rootScopes
   $rootScope.apiBaseUrl = 'http://localhost/paravey-pre';//false
-  $rootScope.isRegistered = false;//false
+  $rootScope.isRegistered = true;//false
   $rootScope.userId = '';// ''
   $rootScope.currPage = '';
 });

@@ -53,10 +53,23 @@
 }
 .btn.btn-lg2{
   font-size: 1.65em;
-  padding: 10px 30px;
+  // padding: 10px 30px;
+  padding: 7px 30px;
 }
 .btn.reg-btn{
   &:hover,&:focus,&:active{
     color: #fff;
   }
+}
+
+.loader-btn .loader{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  border-top: 3.5px solid rgba(255, 255, 255, 0.2);
+  border-right: 3.5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3.5px solid rgba(255, 255, 255, 0.2);
+  border-left: 3.5px solid #ffffff;
+  vertical-align: middle;
 }

@@ -1,0 +1,98 @@
+section.congoSection{
+  background-image: url(../images/bg3.png);
+  min-height: 650px;
+  .congoPanel{
+    overflow: hidden;
+    padding: 15px;
+    max-width: 720px;
+    width: 90%;
+    background: #fff;
+    margin: 50px auto;
+    @include box-shadow(0,0,1px,2px,$bright-green);
+    @include border-radius(6px);
+    h1.panelTitle{
+      position: relative;
+      text-transform: uppercase;
+      color: $bright-green;
+      letter-spacing: 5px;
+      // white-space: nowrap;
+      // padding: 10px 0 0;
+      &:before, &:after{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 10%;
+        height: 2px;
+        background: $bright-green;
+        margin: 0 10px;
+      }
+    }
+    h2.subTitle{
+      text-transform: uppercase;
+      font-family: $primary-font;
+      font-size: 1.4em;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      span{
+        font-weight: 600;
+      }
+    }
+  }
+
+  .coupenWrap {
+    .coupen{
+      margin: 10px 0;
+      // width: 100%;
+      @include border-radius(5px);
+      @include box-shadow(3px, 3px, 8px, 1px, rgba(0,0,0,.28));
+      overflow: hidden;
+      .earn{
+        padding: 15px 0;
+        text-align: center;
+        span{display: inline-block;}
+        span.text{
+          line-height: 80px;
+          vertical-align: top;
+          text-transform: uppercase;
+          color: #fff;
+          letter-spacing: 2px;
+          font-size: 12px;
+        }
+        span.points{
+          font-family: $futura;
+          font-size: 4em;
+          color: #fff;
+          font-weight: 700;
+        }
+        span.ico-paraveyPoints{
+          width: 25px;
+          height: 45px;
+          background-size: 25px;
+        }
+      }
+      .task{
+        text-align: center;
+        background: $light-gray;
+        padding: 10px 0;
+        height: 60px;
+        display: table;
+        width: 100%;
+        a{
+          text-decoration: none;
+          color: $dark-gray;
+          font-family: $futura;
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: 1.75px;
+          font-weight: 700;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      img{
+        margin: auto;
+      }
+
+    }
+  }
+}

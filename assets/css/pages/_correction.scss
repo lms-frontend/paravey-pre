@@ -1,0 +1,54 @@
+.hero-form label{
+  display: none;
+}
+.form-group .errMsz{
+  margin: 5px 0;
+}
+.quizSection{
+  position: relative;
+  .quizBG{
+    // background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: all .5s;
+    &.bgslide1{
+      background-image: url(../images/bg1.jpg);
+    }
+    &.bgslide2{
+      background-image: url(../images/bg2.jpg);
+    }
+    &.bgslide3{
+      background-image: url(../images/bg4.jpg);
+    }
+    &.thankU{
+      background-image: url(../images/bg5.jpg);
+    }
+  }
+  .hideBG{
+    opacity: 0;
+  }
+  // .noBG{
+  //   opacity: 0;
+  //   // animation-name: bgChange;
+  //   // animation-duration: .5s;
+  //   // animation-timing-function: linear;
+  //   // animation-fill-mode: forwards;
+  // }
+  // .addBG{
+  //   opacity: 1;
+  // }
+
+}
+
+@keyframes bgChange {
+  100%{
+    opacity: 0%;
+  }
+}

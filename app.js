@@ -12,6 +12,10 @@ myApp.config(['$routeProvider','$locationProvider','$httpProvider',function($rou
           templateUrl: 'assets/views/quiz.html',
           controller : 'QuizCtrl as quizCtrl'
       })
+      .when('/congratulations', {
+          templateUrl: 'assets/views/congratulations.html',
+          controller : 'CongoCtrl as congCtrl'
+      })
       .otherwise({
             redirectTo: '/'
       });

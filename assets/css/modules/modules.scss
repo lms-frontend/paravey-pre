@@ -1,5 +1,6 @@
 @import "buttons";
 @import "headings";
+@import "loader";
 
 .errMsz{
   font-size: 12px;
@@ -22,4 +23,16 @@
   color: red;
   font-size: 12px;
   margin-left: 5px;
+}
+[class^='ico-']{
+  // background: red;
+  background-repeat: no-repeat;
+  display: inline-block;
+
+}
+.ico-paraveyPoints{
+  background-image: url(../images/points.png);
+  width: 25px;
+  height: 50px;
+  background-size: 25px;
 }

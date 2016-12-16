@@ -5,4 +5,26 @@
   .quiz-form{
     margin-top: 85px!important;
   }
+
+
+}
+@media only screen and (max-width: 768px){
+
+  section.congoSection{
+    .congoPanel{
+      h1.panelTitle{
+        font-size: 2.5em;
+        letter-spacing: 2.5px;
+      }
+    }
+  }
+
+  // footer
+  .languageSelector{
+    .lang-select{
+      margin: 10px 0;
+    }
+  }
+  // footer
+
 }

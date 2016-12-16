@@ -11,6 +11,7 @@ function encode_string($str){
   //return base64_encode($str);
 }
 
+
 function uploadBase64Image($userId,$profilePhoto,$uploadPath)
 {
     $fileName = 'pic_'.time().$userId.'.jpg';
@@ -48,17 +49,14 @@ function big_rand($len){
 function sendEmail($email, $subject, $body, $from = '', $cc = '', $bcc = '') {
           
       $mail = new PHPMailer;
-      //$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
+     
       $mail->isSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-     // $mail->Host = "ssl://smtp.gmail.com";
+      $mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
-      $mail->Username = '';                 // SMTP username
-      $mail->Password = '';                           // SMTP password
-      $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-      $mail->Port = 587;                                    // TCP port to connect to
-      $mail->setFrom($from, 'Speak App');
+      $mail->Username = 'lmsuser3@gmail.com';                 // SMTP username
+      $mail->Password = 'lmsserver1234';                           // SMTP password
+      $mail->Port = 465; 
+      $mail->setFrom($from, 'LMS');
       $mail->addAddress($email);     // Add a recipient
       $mail->isHTML(true);      // Set email format to HTML
 
@@ -67,20 +65,10 @@ function sendEmail($email, $subject, $body, $from = '', $cc = '', $bcc = '') {
      
       if(!$mail->Send())
         return 0;
-       // echo "Mailer Error: " . $mail->ErrorInfo;
       else
        return 1;
-       // echo "Message has been sent";
- 
-   // $subject = "Password Reset";
-
-    //$from = "info@knowledgeflow.in";          //Your valid email address here
-
-   // $from = "ranjana.bhagwat21@gmail.com"; 
-
-   // $mailSend = mail($email, $subject, $body, "From:" . $from);
- 
-    //return $mailSend;
+     
+  
 }
 
 
@@ -180,4 +168,22 @@ if(move_uploaded_file($image["tmp_name"], $target_path)) {
 }
 
 
+}
+
+
+function updatePoints($userid){
+  $db = getDB();
+   $query = $db->query("insert into user_earned_points(`user_id`,`earned_points`) "
+                    . "values('". $userid . "',50)");
+   $Id = $db->lastInsertId();
+   $sql = "SELECT * FROM user_bucket where user_id='" . $userid . "'";
+   $stmt = $db->query($sql);
+   if($stmt->rowCount() > 0) {
+     
+     $db->query("update user_bucket set `total_points`= (`total_points`+ 50) where user_id=" . $userid);
+   }else{
+      $query = $db->query("insert into user_bucket(`user_id`,`total_points`) "
+                    . "values('". $userid . "',`total_points`+50)");
+   }
+   return $Id;
 }

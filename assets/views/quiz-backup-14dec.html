@@ -1,0 +1,98 @@
+<main class="main-content">
+  <!-- hero-section starts -->
+  <section class="hero-section quizSection">
+      <div ng-show="quizCtrl.currentQ == 1" class="dtable quizWrap text-center">
+        <div class="hero-right">
+          <form ng-submit="quizCtrl.quizSubmit(quizCtrl.optAns, 'Do you like working from home? ')">
+            <div class="quiz-form">
+            <h3 class="question">Do you like working from home?</h3>
+              <div class="ques">
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio1" name="radio1" ng-model="quizCtrl.optAns" value="yes" >
+                    <label class="btn-ans" for="inlineRadio1"> Yes </label>
+                </div>
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio2" name="radio1" ng-model="quizCtrl.optAns" value="no" >
+                    <label class="btn-ans" for="inlineRadio2"> NO </label>
+                </div>
+              </div>
+              <button  class="btn reg-btn btn-lg2 quizNext">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div ng-show="quizCtrl.currentQ == 2" class="dtable quizWrap text-center">
+        <div class="hero-right">
+          <form ng-submit="quizCtrl.quizSubmit1(quizCtrl.optAns1 ,'Would you like to know your credit score?')">
+            <div class="quiz-form">
+            <h3 class="question">Would you like to know your credit score?</h3>
+              <div class="ques">
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio21" name="radio2" ng-model="quizCtrl.optAns1" value="yes" >
+                    <label class="btn-ans" for="inlineRadio21"> Yes </label>
+                </div>
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio22" name="radio2" ng-model="quizCtrl.optAns1" value="no" >
+                    <label class="btn-ans" for="inlineRadio22"> NO </label>
+                </div>
+              </div>
+              <button  class="btn reg-btn btn-lg2 quizNext">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <div ng-show="quizCtrl.currentQ == 3" class="dtable quizWrap text-center">
+        <div class="hero-right">
+          <form ng-submit="quizCtrl.quizSubmit2(quizCtrl.optAns2 ,'Have you ever work like this before ?')">
+            <div class="quiz-form">
+            <h3 class="question">Have you ever work like this before ?</h3>
+              <div class="ques">
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio31" name="radio3" ng-model="quizCtrl.optAns2" value="Yes" >
+                    <label class="btn-ans" for="inlineRadio31"> Yes </label>
+                </div>
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio32" name="radio3" ng-model="quizCtrl.optAns2" value="No" >
+                    <label class="btn-ans" for="inlineRadio32"> NO </label>
+                </div>
+              </div>
+
+              <div class="ques">
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio33" name="radio3" ng-model="quizCtrl.optAns2" value="Never" >
+                    <label class="btn-ans" for="inlineRadio33"> Never </label>
+                </div>
+                <div class="radio radio-inline options">
+                    <input type="radio" id="inlineRadio34" name="radio3" ng-model="quizCtrl.optAns2" value="Sometimes" >
+                    <label class="btn-ans" for="inlineRadio34"> Always </label>
+                </div>
+              </div>
+              <button  class="btn reg-btn btn-lg2 quizNext">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div ng-show="quizCtrl.thankU" class="dtable quizWrap text-center">
+        <div class="hero-right">
+          <div class="quiz-form thankyou">
+              <h3 class="question thankU-heading">Thank You</h3>
+              <div class="thankU-text">
+                You Have been successfully registered.
+              </div>
+
+
+            </div>
+        </div>
+      </div>
+
+  </section>
+  <!-- hero-section ends -->
+
+  <!-- our partners -->
+
+  <!-- our partners ends-->
+</main>

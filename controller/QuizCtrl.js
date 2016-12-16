@@ -1,16 +1,19 @@
-myApp.controller('QuizCtrl', function($http, $rootScope, $location){
+myApp.controller('QuizCtrl', function($http, $rootScope, $location, $timeout){
   var vm = this;
 
   $rootScope.currPage = 'quiz';
 
+  // prevent non registered users to access start
   if(!$rootScope.isRegistered){
     $location.path('/');
-  }
+  } // prevent non registered users to access ends
 
   clickeffect();
 
 // post quiz ans
   vm.sendQuiz = function(quizData){
+    // changeBG();
+
     $http({
          url: $rootScope.apiBaseUrl + "/webservices/v1/api/quiz",
          method: 'POST',
@@ -33,7 +36,10 @@ myApp.controller('QuizCtrl', function($http, $rootScope, $location){
   vm.quizSubmit = function(ans, ques) {
     console.log(vm.optAns);
     if(vm.optAns !== undefined){
-        vm.currentQ = 2;
+        $timeout(function () {
+          vm.currentQ = 2;
+        }, 400);
+
       //post answer to api
       var qdata = {
         user_id : $rootScope.userId,
@@ -65,8 +71,9 @@ myApp.controller('QuizCtrl', function($http, $rootScope, $location){
       };
       // ansData.push(qdata);
       //hide current slide and show another thannkU
+      $timeout(function () {
       vm.currentQ = 3;
-
+    }, 400);
       console.log(qdata);
       //pushing to api
       vm.sendQuiz(qdata);
@@ -89,13 +96,23 @@ myApp.controller('QuizCtrl', function($http, $rootScope, $location){
         answer : ans
       };
       // ansData.push(qdata);
-      //hide current slide and show another thannkU
-      vm.currentQ = null;
-      vm.thankU = true;
 
+      //hide current slide and show another thannkU
+      $timeout(function () {
+      vm.currentQ = null;
+    }, 400);
+      $timeout(function () {
+      vm.thankU = true;
+    }, 400);
       console.log(qdata);
       //pushing to api
       vm.sendQuiz(qdata);
+
+      //congratulations page redirction after 3sec
+      $timeout(function() {
+        $location.path('/congratulations');
+      }, 3000);
+      //congratulations page redirction after 3sec
     }
     else {
       $('.quizWrap .quiz-form').addClass('animated tada');
